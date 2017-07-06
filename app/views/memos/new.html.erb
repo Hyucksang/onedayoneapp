@@ -1,0 +1,12 @@
+<h1>Memos#new</h1>
+<p>Find me in app/views/memos/new.html.erb</p>
+
+<%= bootstrap_form_for(@memo) do |f| %>
+    <div class="actions">
+        <%= f.hidden_field :user_id %>
+        <%= f.text_field :title %>
+        <%= f.text_area :content, label: '내용', class: "tinymce", rows: 15, cols: 120 %>
+        <%= tinymce %>
+        <%= f.submit %>
+    </div>
+<% end %>
